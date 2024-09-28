@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Base Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 * {
     margin: 0px;
     padding: 0px;
@@ -56,13 +58,9 @@
     color: #bbb;
     font-size: 2.5rem;
     display: flex;
-    /* Change to flex for horizontal alignment */
     justify-content: baseline;
-    /* Center the icons horizontally */
     gap: 4rem;
-    /* Space between icons */
     margin-top: 1rem;
-    /* Add some margin at the top */
     text-decoration: none;
 }
 
@@ -73,12 +71,10 @@
 
 .icons i {
     transition: transform 0.3s ease;
-    /* Smooth transition for hover effect */
 }
 
 .icons i:hover {
     transform: scale(2);
-    /* Zoom effect on hover */
 }
 
 .content {
@@ -97,6 +93,7 @@
 .content h1 {
     font-size: 4rem;
     color: #5db9ee;
+    animation: slideIn 2s ease-out;
 }
 
 .content .detail {
@@ -198,13 +195,38 @@ button:nth-child(2):hover {
     .right-container {
         width: 100%;
         height: auto;
-        /* Allow height to adjust based on content */
     }
     .nav-list {
         flex-direction: column;
-        /* Stack navigation items vertically */
         gap: 1rem;
-        /* Adjust spacing */
+        padding-top: 1rem;
+    }
+    .content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .content h1 {
+        font-size: 2.5rem;
+    }
+    .content .intro {
+        font-size: 1.2rem;
+    }
+    .content .detail {
+        font-size: 1rem;
+    }
+    .icons {
+        font-size: 2rem;
+        gap: 2rem;
+    }
+    .btn-container button {
+        font-size: 1rem;
+        padding: .7rem 1.2rem;
+    }
+    .circle:nth-child(1) {
+        width: 20rem;
+    }
+    .circle:nth-child(2) {
+        width: 18rem;
     }
 }
 
@@ -219,13 +241,6 @@ button:nth-child(2):hover {
     }
 }
 
-
-/* Apply the animation to the heading */
-
-h1 {
-    animation: slideIn 2s ease-out;
-}
-
 @keyframes slideInFromRight {
     from {
         transform: translateX(100%);
@@ -236,9 +251,6 @@ h1 {
         opacity: 1;
     }
 }
-
-
-/* Apply the animation to the desired element */
 
 .icons {
     animation: slideInFromRight 2s ease-out;
